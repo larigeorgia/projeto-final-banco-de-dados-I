@@ -1,4 +1,4 @@
-from conexao import conexao_db
+from python.conexao import conexao_db
 
 # especificações: Pelo menos três consultas SELECT diferentes, incluindo pelo menos um JOIN e um WHERE. 
 # Uma inserção, uma atualização e uma remoção de dados feitas via Python, todas parametrizadas (uso de %s, 
@@ -12,6 +12,7 @@ from conexao import conexao_db
 # delete de tarefa
 
 # CRUD - Funcionário
+
 
 def criar_funcionario(nome, cargo):
     conectado = conexao_db()
