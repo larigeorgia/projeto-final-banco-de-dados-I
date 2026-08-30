@@ -67,6 +67,9 @@ def buscar_funcionario_por_id(id_Funcionario):
 
 def atualizar_funcionario(id_Funcionario, novo_nome_funcionario, novo_cargo):
     """Atualiza um funcionário do banco de dados.
+    Parâmetros: id_Funcionario (int).
+                novo_nome_funcionario (str).
+                novo_cargo (str).
     """
     conectado = conexao_db()
     try:

@@ -67,6 +67,9 @@ def buscar_projeto_por_id(id_Projeto):
 
 def atualizar_projeto(id_Projeto, novo_nome_projeto, nova_data_inicio):
     """Atualiza um projeto do banco de dados.
+    Parâmetros: id_Projeto (int).
+                novo_nome_projeto (str).
+                nova_data_inicio (str) - AAAA-MM-DD.
     """
     conectado = conexao_db()
     try:
