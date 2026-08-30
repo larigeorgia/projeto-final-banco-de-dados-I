@@ -1,6 +1,7 @@
 from python.crud_funcionario import criar_funcionario, listar_funcionarios, buscar_funcionario_por_id, atualizar_funcionario, deletar_funcionario
 from python.crud_projeto import criar_projeto, listar_projetos, buscar_projeto_por_id, atualizar_projeto, deletar_projeto
 from python.crud_tarefa import criar_tarefa, listar_tarefas, buscar_tarefa_por_id, atualizar_tarefa, deletar_tarefa
+from python.crud_alocacao import criar_alocacao, listar_alocacoes, buscar_alocacao_por_id, atualizar_alocacao, deletar_alocacao
 
 while True:
     print(50*"=")
@@ -27,6 +28,13 @@ while True:
     print("13 - Buscar Tarefa por ID")
     print("14 - Atualizar Tarefa")
     print("15 - Deletar Tarefa")
+
+    print("   \n-----ALOCAÇÕES-----")
+    print("16 - Criar Alocação")
+    print("17 - Listar Alocações")
+    print("18 - Buscar Alocação por ID")
+    print("19 - Atualizar Alocação")
+    print("20 - Deletar Alocação")
 
     print("0. Sair do Sistema")
 
@@ -90,3 +98,24 @@ while True:
         case '15':
             id_tarefa = int(input("Digite o ID da Tarefa:"))           
             deletar_tarefa(id_tarefa)
+        case '16':
+            data_alocacao = input("Data da alocação (fomato AAAA-MM-DD): ")
+            horas_dedicadas = int(input("Digite a quantidade de horas que serão dedicadas ao projeto:"))
+            id_funcionario = int(input("Digite o ID do Funcionário:"))
+            id_projeto = int(input("Digite o ID do Projeto:"))
+            criar_alocacao(data_alocacao, horas_dedicadas, id_funcionario, id_projeto)
+        case '17':
+            listar_alocacoes()
+        case '18':
+            id_alocacao = int(input("Digite o ID da Alocação:"))
+            buscar_alocacao_por_id(id_alocacao)
+        case '19':
+            id_alocacao = int(input("Digite o ID da Alocação:"))
+            nova_data_alocacao = input("Nova data da alocação (fomato AAAA-MM-DD): ")
+            novas_horas_dedicadas = int(input("Nova quantidade de horas que serão dedicadas ao projeto:"))
+            novo_id_funcionario = int(input("Novo ID do Funcionário:"))
+            novo_id_projeto = int(input("Novo ID do Projeto:")) 
+            atualizar_alocacao(id_alocacao, nova_data_alocacao, novas_horas_dedicadas, novo_id_funcionario, novo_id_projeto)
+        case '20':
+            id_alocacao = int(input("Digite o ID da Alocação:"))
+            deletar_alocacao(id_alocacao)
