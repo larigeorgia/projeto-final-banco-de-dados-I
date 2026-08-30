@@ -15,13 +15,26 @@ while True:
     if opcao == '0':
         print("Saindo do sistema!")
         break
-    elif opcao == '1':
-        nome_projeto = input("Nome do projeto: ")
-        data_inicio = input("Data de início (fomato AAAA-MM-DD): ")
-        criar_projeto(nome_projeto, data_inicio)
 
     match opcao:
         case '1':
             nome_projeto = input("Nome do projeto: ")
             data_inicio = input("Data de início (fomato AAAA-MM-DD): ")
             criar_projeto(nome_projeto, data_inicio)
+            
+        case '2':
+            listar_projetos()
+            
+        case '3':
+            id_projeto = int(input("Digite o ID do Projeto:"))
+            buscar_projeto_por_id(id_projeto)
+            
+        case '4':
+            id_projeto = int(input("Digite o ID do Projeto:"))            
+            novo_nome = input("Digite o novo nome do projeto: ")
+            nova_data = input("Digite a nova data de início (fomato AAAA-MM-DD): ")
+            atualizar_projeto(id_projeto, novo_nome, nova_data)
+            
+        case '5':
+            id_projeto = int(input("Digite o ID do Projeto:"))
+            deletar_projeto(id_projeto)
