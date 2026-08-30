@@ -85,13 +85,13 @@ Este projeto consiste na modelagem e implementação de um sistema de banco de d
 
 ## 🛠️ Tecnologias Utilizadas
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Python 3.13.4](https://img.shields.io/badge/Python-3.13.4-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![MySQL Connector](https://img.shields.io/badge/MySQL_Connector-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![Dotenv](https://img.shields.io/badge/.ENV-ECD53F?style=for-the-badge&logo=.env&logoColor=black)
 
 * **Banco de Dados:** MySQL 8.0
-* **Linguagem:** Python 3.x
+* **Linguagem:** Python 3.13+ (Testado até a versão 3.14.4)
 * **Driver de Conexão:** `mysql-connector-python`
 * **Variáveis de Ambiente:** `python-dotenv`
 
