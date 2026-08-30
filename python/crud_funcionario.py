@@ -4,7 +4,7 @@ from python.conexao import conexao_db
 def criar_funcionario(nome, cargo):
     """Cadastra um novo funcionario no banco de dados.
     Parâmetros: nome (str).
-                cargo (str)..
+                cargo (str).
     """
     conectado = conexao_db()
     try:

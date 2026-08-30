@@ -1,5 +1,6 @@
 from python.crud_funcionario import criar_funcionario, listar_funcionarios, buscar_funcionario_por_id, atualizar_funcionario, deletar_funcionario
 from python.crud_projeto import criar_projeto, listar_projetos, buscar_projeto_por_id, atualizar_projeto, deletar_projeto
+from python.crud_tarefa import criar_tarefa, listar_tarefas, buscar_tarefa_por_id, atualizar_tarefa, deletar_tarefa
 
 while True:
     print(50*"=")
@@ -19,6 +20,14 @@ while True:
     print("8 - Buscar Projeto por ID")
     print("9 - Atualizar Projeto")
     print("10 - Deletar Projeto")
+
+    print("   \n-----TAREFAS-----")
+    print("11 - Criar Tarefa")
+    print("12 - Listar Tarefas")
+    print("13 - Buscar Tarefa por ID")
+    print("14 - Atualizar Tarefa")
+    print("15 - Deletar Tarefa")
+
     print("0. Sair do Sistema")
 
     opcao = input("\n Digite o número da opção desejada: ").strip()
@@ -45,7 +54,6 @@ while True:
         case '5':
             id_funcionario = int(input("Digite o ID do Funcionário:"))
             deletar_funcionario(id_funcionario)
-
         case '6':
             nome_projeto = input("Nome do projeto: ")
             data_inicio = input("Data de início (fomato AAAA-MM-DD): ")
@@ -63,3 +71,22 @@ while True:
         case '10':
             id_projeto = int(input("Digite o ID do Projeto:"))
             deletar_projeto(id_projeto)
+        case '11':
+            descricao = input("Descreva a Tarefa: ")
+            situacao = input("Situação da Tarefa (Pendente, Em Andamento, Concluída): ")
+            id_projeto = int(input("Digite o ID do Projeto:"))
+            criar_tarefa(descricao, situacao, id_projeto)
+        case '12':
+            listar_tarefas()
+        case '13':
+            id_tarefa = int(input("Digite o ID da Tarefa:"))
+            buscar_tarefa_por_id(id_tarefa)
+        case '14':
+            id_tarefa = int(input("Digite o ID da Tarefa:"))           
+            nova_descricao = input("Nova descrição da tarefa: ")
+            nova_situacao = input("Nova situação da Tarefa (Pendente, Em Andamento, Concluída):")
+            id_projeto = int(input("Digite o ID do Projeto:")) 
+            atualizar_tarefa(id_tarefa, nova_descricao, nova_situacao, id_projeto)
+        case '15':
+            id_tarefa = int(input("Digite o ID da Tarefa:"))           
+            deletar_tarefa(id_tarefa)
