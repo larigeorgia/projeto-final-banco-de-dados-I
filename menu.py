@@ -131,8 +131,8 @@ while True:
             id_projeto = int(input("Digite o ID do Projeto:"))
             listar_tarefa_de_projeto(situacao, id_projeto)
         case '22':
-            data_alocacao = input("Digite a partir de qual data será feito o filtro (fomato AAAA-MM-DD, exemplo: 2026-08-01): ")
             horas_dedicadas = int(input("Digite a quantidade de horas para análise:"))
-            alocacoes_alta_carga_horaria_por_periodo(horas_dedicadas, horas_dedicadas)
+            data_alocacao = input("Digite a partir de qual data será feito o filtro (fomato AAAA-MM-DD, exemplo: 2026-08-01): ")
+            alocacoes_alta_carga_horaria_por_periodo(horas_dedicadas, data_alocacao)
         case '23':
             relat_de_alocacoes_com_projetos_e_funcionarios()
