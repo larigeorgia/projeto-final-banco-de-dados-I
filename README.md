@@ -47,7 +47,7 @@ Este projeto consiste na modelagem e implementação de um sistema de banco de d
 
    cd projeto-final-banco-de-dados-I
     ```
-3. **Instalar as dependências:**
+2. **Instalar as dependências:**
 
     Na raiz do projeto, instale as dependências (bibliotecas necessárias) executando o comando abaixo no terminal:
     ```bash
@@ -56,19 +56,19 @@ Este projeto consiste na modelagem e implementação de um sistema de banco de d
 
 3. **Executar o arquivo script.sql no MySQL Workbench:**
 
-    2.1 - Abra o MySQL Workbench e clique na sua conexão local para entrar.
+    3.1 - Abra o MySQL Workbench e clique na sua conexão local para entrar.
 
-    2.2 - No menu superior, clique em File -> Open SQL Script... (ou use o atalho Ctrl + O no Windows / Cmd + O no Mac).
+    3.2 - No menu superior, clique em File -> Open SQL Script... (ou use o atalho Ctrl + O no Windows / Cmd + O no Mac).
 
-    2.3 - Navegue até a pasta do seu projeto clonado e selecione o arquivo script.sql.
+    3.3 - Navegue até a pasta do seu projeto clonado e selecione o arquivo script.sql.
 
-    2.4 - O conteúdo do script vai abrir em uma nova aba de editor de código dentro do Workbench.
+    3.4 - O conteúdo do script vai abrir em uma nova aba de editor de código dentro do Workbench.
     
-    2.5 - Execute o script. Clique no ícone do Raio (o primeiro raio da barra de ferramentas, sem o desenho da lupa) ou use o atalho Ctrl + Shift + Enter. O Workbench vai ler todo o arquivo em ordem sequencial: criará o banco de dados, criará as 4 tabelas, aplicará as chaves primárias/estrangeiras e inserirá a massa de dados de teste.
+    3.5 - Execute o script. Clique no ícone do Raio (o primeiro raio da barra de ferramentas, sem o desenho da lupa) ou use o atalho Ctrl + Shift + Enter. O Workbench vai ler todo o arquivo em ordem sequencial: criará o banco de dados, criará as 4 tabelas, aplicará as chaves primárias/estrangeiras e inserirá a massa de dados de teste.
 
-    2.6 - Confirme a criação do banco. No painel esquerdo, vá até Schemas, clique no ícone de atualizar (duas setas em círculo). Confirme que o banco alocacao aparece na lista.
+    3.6 - Confirme a criação do banco. No painel esquerdo, vá até Schemas, clique no ícone de atualizar (duas setas em círculo). Confirme que o banco alocacao aparece na lista.
 
-3. **Configurar as Variáveis de Ambiente**
+4. **Configurar as Variáveis de Ambiente**
     Crie um arquivo .env na raiz do projeto com as credenciais do seu MySQL:
     ```bash
     HOST=
@@ -76,7 +76,7 @@ Este projeto consiste na modelagem e implementação de um sistema de banco de d
     PASSWORD=
     DATABASE=Alocacao
     ```
-4. **Iniciar a aplicação**
+5. **Iniciar a aplicação**
     ```bash
     python menu.py
     ```
