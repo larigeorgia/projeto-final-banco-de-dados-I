@@ -2,11 +2,12 @@ from python.crud_funcionario import criar_funcionario, listar_funcionarios, busc
 from python.crud_projeto import criar_projeto, listar_projetos, buscar_projeto_por_id, atualizar_projeto, deletar_projeto
 from python.crud_tarefa import criar_tarefa, listar_tarefas, buscar_tarefa_por_id, atualizar_tarefa, deletar_tarefa
 from python.crud_alocacao import criar_alocacao, listar_alocacoes, buscar_alocacao_por_id, atualizar_alocacao, deletar_alocacao
+from python.outras_consultas import listar_tarefa_de_projeto, alocacoes_alta_carga_horaria_por_periodo, relat_de_alocacoes_com_projetos_e_funcionarios
 
 while True:
-    print(50*"=")
-    print("       SISTEMA DE ALOCAÇÃO DE PROJETOS")
-    print(50*"=")
+    print("\n"+45*"=")
+    print("      SISTEMA DE ALOCAÇÃO DE PROJETOS")
+    print(45*"=")
     print("Escolha uma das opções: ")
     print("  \n-----FUNCIONÁRIOS-----")
     print("1 - Criar Funcionário")
@@ -36,9 +37,15 @@ while True:
     print("19 - Atualizar Alocação")
     print("20 - Deletar Alocação")
 
-    print("0. Sair do Sistema")
+    print("   \n-----OUTRAS CONSULTAS-----")
+    print("21 - Listar tarefa de Projeto")
+    print("22 - Alocações com alta carga horária por período")
+    print("23 - Relatório de Alocações com nome de projetos e Funcionários")
 
-    opcao = input("\n Digite o número da opção desejada: ").strip()
+
+    print("\n0 - Sair do Sistema")
+
+    opcao = input("\nDigite o número da opção desejada: ").strip()
 
     if opcao == '0':
         print("Saindo do sistema!")
@@ -119,3 +126,13 @@ while True:
         case '20':
             id_alocacao = int(input("Digite o ID da Alocação:"))
             deletar_alocacao(id_alocacao)
+        case '21':
+            situacao = input("Situação da Tarefa (Pendente, Em Andamento, Concluída): ")
+            id_projeto = int(input("Digite o ID do Projeto:"))
+            listar_tarefa_de_projeto(situacao, id_projeto)
+        case '22':
+            data_alocacao = input("Digite a partir de qual data será feito o filtro (fomato AAAA-MM-DD, exemplo: 2026-08-01): ")
+            horas_dedicadas = int(input("Digite a quantidade de horas para análise:"))
+            alocacoes_alta_carga_horaria_por_periodo(horas_dedicadas, horas_dedicadas)
+        case '23':
+            relat_de_alocacoes_com_projetos_e_funcionarios()
