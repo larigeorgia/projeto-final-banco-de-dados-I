@@ -8,7 +8,6 @@
 Projeto Banco de Dados
 
 O nosso projeto é um banco de dados de uma empresa contendo funcionários, projetos, tarefas e alocações, com relacionamentos de N:N, onde um funcionário pode ser alocado em vários projetos ao longo do tempo, e cada projeto tem vários funcionários alocados.
-
 Cada participante fez uma parte crucial e bastante importante para o projeto de banco de dados:
 
 Eduardo: Fez os diagramas DER no padrão Crow's Foot (Pé de Galinha), que são as imagens guias para a formação das tabelas, mostrando o que é preciso, em qual ordem cada tabela se relaciona e permitindo ver de forma clara como o banco de dados vai funcionar.
