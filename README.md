@@ -26,6 +26,7 @@ Para estruturar o sistema, definimos as seguintes regras de negócio e conexões
 
 Entidades e Atributos Principais:
 Funcionário: Contém ID_funcionario, nome e cargo.
+
 Projeto: Contém ID_Projeto, nome_projeto e data_início.
 Tarefa: Contém ID_Tarefa, descrição, situacao e ID_Projeto.
 Alocacao: contém ID_Alocacao, Data_Alocacao, Horas_Dedicadas, ID_Funcionario, ID_Projeto. 
